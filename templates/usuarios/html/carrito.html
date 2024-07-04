@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros productos</title>
+    <link rel="stylesheet" href="./static/CSS/carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="https://es.wikipedia.org/wiki/Café" class="logo" target="blank">Qué es el café?</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="{{ url_for('static', filename='img/menu.png') }}" alt="" class="menu-icono">
+                
+            </label>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="{{url_for('index')}}">Inicio</a></li>
+                    <li><a href="{{url_for('nosotros')}}">Sobre nosotros</a></li>
+                    <li><a href="{{url_for('carrito')}}">Nuestros productos</a></li>
+                    <li><a href="{{url_for('usuarios')}}">Contáctenos</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="header-content container">
+        <h1>cafe argento</h1>
+        <a href="{{url_for('nosotros')}}" class="btn-1">Informacion</a>
+        </div>
+
+    </header>
+
+    <section class="banner">
+        <div class="content-banner">
+            <p>Café Delicioso</p>
+            <h2>100% Natural <br />Café Fresco</h2>
+            <a class="comprarahora" href="#productos">Comprar ahora</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="container container-features">
+            <div class="card-feature">
+                <i class="fa-solid fa-plane-up"></i>
+                <div class="feature-content">
+                    <span>Envío gratuito a nivel mundial</span>
+                    <p>En pedido superior a $150</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-wallet"></i>
+                <div class="feature-content">
+                    <span>Contrareembolso</span>
+                    <p>100% garantía de devolución de dinero</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-gift"></i>
+                <div class="feature-content">
+                    <span>Tarjeta regalo especial</span>
+                    <p>Ofrece bonos especiales con regalo</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-headset"></i>
+                <div class="feature-content">
+                    <span>Servicio al cliente 24/7</span>
+                    <p>LLámenos 24/7 al 123-456-7890</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container top-categories">
+            <h1 class="heading-1">Categorías</h1>
+            <div class="container-categories">
+                <div class="card-category category-moca">
+                    <p>Arábica</p>
+                    <span>Ver más</span>
+                </div>
+                <div class="card-category category-expreso">
+                    <p>Robusta</p>
+                    <span>Ver más</span>
+                </div>
+                <div class="card-category category-capuchino">
+                    <p>libérica</p>
+                    <span>Ver más</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container top-products">
+            <h1 class="heading-1" id="productos">Productos</h1>
+
+            <div class="container-products">
+                <!-- Producto 1 -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <img src="{{ url_for('static', filename='img/arabicaoriginal.png') }}" alt="Cafe Irish">
+                        
+                        <span class="discount">-15%</span>
+                        <div class="button-group">
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-heart"></i>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-code-compare"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Arábica</h3>
+                        <span class="add-cart">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </span>
+                        <p class="price">$25.500 <span>$30.000</span></p>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <img src="{{ url_for('static', filename='img/robusta.png') }}" alt="Cafe incafe-ingles.jpg">
+                        
+                        <span class="discount">-20%</span>
+                        <div class="button-group">
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-heart"></i>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-code-compare"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Robusta</h3>
+                        <span class="add-cart">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </span>
+                        <p class="price">$20.000 <span>$25.000</span></p>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <img src="{{ url_for('static', filename='img/robusta.png') }}"  alt="Cafe Australiano">
+                        
+                        <div class="button-group">
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-heart"></i>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-code-compare"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Libérica</h3>
+                        <span class="add-cart">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </span>
+                        <p class="price">$18.000</p>
+                    </div>
+                </div>        
+            </div>
+        </section>
+
+        <section class="gallery">
+            <img src="{{ url_for('static', filename='img/gallery1.jpg') }}"  alt="gallery-image-1">
+            <img src="{{ url_for('static', filename='img/gallery2.jpg') }}"  alt="gallery-image-2">
+            <img src="{{ url_for('static', filename='img/gallery3.jpg') }}"  alt="gallery-image-3">
+            <img src="{{ url_for('static', filename='img/gallery4.jpg') }}"  alt="gallery-image-4">
+            <img src="{{ url_for('static', filename='img/gallery5.jpg') }}"  alt="gallery-image-5">
+            
+                 
+        </section>        
+
+        <footer class="footer">
+
+            <div class="footer-content">
+                   <a href="https://www.facebook.com" target="_blank" class="icon">
+                    <i class="fa-brands fa-facebook fa-bounce"></i>
+                   </a>
+                   <a href="https://www.instagram.com" target="_blank" class="icon">
+                    <i class="fa-brands fa-instagram fa-bounce"></i>
+                   </a>
+                   <a href="https://www.twitter.com" target="_blank" class="icon">
+                    <i class="fa-brands fa-x-twitter fa-bounce"></i>
+                   </a>
+                   <a href="https://www.linkedin.com" target="_blank" class="icon">
+                    <i class="fa-brands fa-linkedin fa-bounce"></i>
+                   </a>
+                   <a href="https://www.whatsapp.com" target="_blank" class="icon">
+                    <i class="fa-brands fa-whatsapp fa-bounce"></i>
+                   </a>   
+            </div>
+        
+                <p>Codo a Codo 2024 - Todos los derechos reservados©</p>
+           
+        </footer>
+
+
+</body>
+</html>

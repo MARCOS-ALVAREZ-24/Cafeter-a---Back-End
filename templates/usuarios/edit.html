@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Argento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/nosotros.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>    
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="https://es.wikipedia.org/wiki/Café" class="logo" target="blank">Qué es el café?</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="{{ url_for('static', filename='img/menu.png') }}" class="menu-icono" alt="">
+                
+            </label>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="{{url_for('nosotros')}}">Sobre nosotros</a></li>
+                    <li><a href="{{url_for('carrito')}}">Nuestros productos</a></li>
+                    <li><a href="{{url_for('usuarios')}}">Contáctenos</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        
+    </header>
+
+<div class="container">
+    {% for usuario in usuarios%} 
+    <form action="/update/{{usuario[0]}}" method="post" enctype="multipart/form-data">
+        Nombre
+        <input type="text" name="txtname" id="txtname" value="{{usuario[3]}}"/> <br>
+        Apellido
+        <input type="text" name="txtlastname" id="txtlastname" value="{{usuario[4]}}"/> <br>
+        Nombre de Usuario
+        <input type="text" name="txtusername" id="txtusername" value="{{usuario[1]}}"/> <br>
+        Contraseña
+        <input type="password" name="txtpassword" id="txtpassword" value="{{usuario[2]}}"/> <br>
+        <input type="submit" value="actualizar"/>
+    </form>
+    {% endfor %}
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-content">
+           <a href="https://www.facebook.com" target="_blank" class="icon">
+            <i class="fa-brands fa-facebook fa-bounce"></i>
+           </a>
+           <a href="https://www.instagram.com" target="_blank" class="icon">
+            <i class="fa-brands fa-instagram fa-bounce"></i>
+           </a>
+           <a href="https://www.twitter.com" target="_blank" class="icon">
+            <i class="fa-brands fa-x-twitter fa-bounce"></i>
+           </a>
+           <a href="https://www.linkedin.com" target="_blank" class="icon">
+            <i class="fa-brands fa-linkedin fa-bounce"></i>
+           </a>
+           <a href="https://www.whatsapp.com" target="_blank" class="icon">
+            <i class="fa-brands fa-whatsapp fa-bounce"></i>
+           </a>   
+    </div>
+
+        <p>Codo a Codo 2024 - Todos los derechos reservados©</p>
+   
+</footer>
+
+
+</body>
+</html>
+

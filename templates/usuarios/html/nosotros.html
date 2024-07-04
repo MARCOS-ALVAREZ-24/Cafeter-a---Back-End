@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="./static/CSS/nosotros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style> 
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="https://es.wikipedia.org/wiki/Café" class="logo" target="blank">Qué es el café?</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="../images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="{{url_for('index')}}">Inicio</a></li>
+                    <li><a href="{{url_for('nosotros')}}">Sobre nosotros</a></li>
+                    <li><a href="{{url_for('carrito')}}">Nuestros productos</a></li>
+                    <li><a href="{{url_for('usuarios')}}">Contáctenos</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="header-content container">
+        <h1>cafe argento</h1>
+        <a href="./nosotros.html" class="btn-1">Informacion</a>
+        </div>
+
+    </header>
+
+
+<section class="about-us">
+
+    <div class="about-card">
+        <h2>Sobre nosotros</h2>
+        <p>Nuestra empresa creada formalmente en 1936. <br>
+        Café Argento; por nuestro bisabuelo. Su compromiso hecho nuestro objetivo; elaborar y comercializar exquisitos granos de cafe o molidos en amplia versatilidad, cuidando el proceso conservando su calidad, para llegar a nuestros consumidores con frescura y su inconfundible aroma. <br>
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h2>Nuestra calidad</h2>
+        <p>Capacitamos a nuestros colaboradores, agregando tecnología para un desarrollo sostenido en nuestra tradición cafetera, ofreciendo calidad y seguridad. <br>
+        Tenemos acciones directas en el medio ambiente; a través de donaciones y procesos de no contaminación. <br><br>
+        </p>
+    </div>
+
+    <img src="../images/coffeeAU.webp" class="image1" alt="">
+
+</section>
+
+<div class="family">
+    <img src="../images/familia.jpg" alt="">
+</div>
+
+<div class="about-end">
+    <p>Contamos con un catalizador certificado asegurando la excelencia en nuestros productos. <br>
+    Brindamos atención especializada en nuestro sitio web <a href="contacto.html">Cafe Argento</a> de L a V de 10 a 18 hs. <br></p>
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-content">
+           <a href="https://www.facebook.com" target="_blank" class="icon">
+            <i class="fa-brands fa-facebook fa-bounce"></i>
+           </a>
+           <a href="https://www.instagram.com" target="_blank" class="icon">
+            <i class="fa-brands fa-instagram fa-bounce"></i>
+           </a>
+           <a href="https://www.twitter.com" target="_blank" class="icon">
+            <i class="fa-brands fa-x-twitter fa-bounce"></i>
+           </a>
+           <a href="https://www.linkedin.com" target="_blank" class="icon">
+            <i class="fa-brands fa-linkedin fa-bounce"></i>
+           </a>
+           <a href="https://www.whatsapp.com" target="_blank" class="icon">
+            <i class="fa-brands fa-whatsapp fa-bounce"></i>
+           </a>   
+    </div>
+
+        <p>Codo a Codo 2024 - Todos los derechos reservados©</p>
+   
+</footer>
+
+    
+</body>
+</html>

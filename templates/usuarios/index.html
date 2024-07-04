@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Argento</title>
+    <link rel="stylesheet" href="./static/CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>    
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="https://es.wikipedia.org/wiki/Café" class="logo" target="blank">Qué es el café?</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="{{ url_for('static', filename='img/menu.png') }}" class="menu-icono" alt="">
+                
+            </label>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="{{url_for('nosotros')}}">Sobre nosotros</a></li>
+                    <li><a href="{{url_for('carrito')}}">Nuestros productos</a></li>
+                    <li><a href="{{url_for('usuarios')}}">Contáctenos</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="header-content container">
+        <h1>cafe argento</h1>
+        
+        </div>
+
+    </header>
+
+    <section class="banner">
+        <div class="content-banner">
+            <h2>Nuestros diferentes tipos de café<br /></h2>
+            <p>
+                La planta de cafe (Coffea) pertenece a la familia de las rubiáceas (rubiaceae), familia de árboles y arbustos tropicales que abarca más de 6000 especies, dentro de las cuales, más de 100 son del género Coffea. De éste centenar destacan dos grandes grupos que trabaja nuestra marca, el coffea arabica (café arábiga) supone entre el 70% y 80% de la producción mundial y el coffea canephora (café robusta) ocupa casi el resto. Un tercero, C. libérica (café ibérico) supone un 1%.
+                <br><br>
+                <br><br>
+            </p>
+        
+            <h3>Variedades de elaboración de cafe más comunes</h3>
+            
+            <p>
+                1. Expresso/ Café solo: <br>
+                Uno de los tipos de café más básicos y sencillos, únicamente consta de un infusión de café la cual se realiza hirviendo agua en contacto con el grano. Se puede preparar en pocos segundos. Se trata de un tipo de café corto, y su tamaño suele ser de alrededor de 30 cl. Es habitual el uso de café de la variante arábiga. Habitualmente suele tener algo de espuma por encima.
+                <br>  
+                <br>
+                2. Ristretto: <br>  
+                Esta variante del espresso se caracteriza por tener la misma cantidad de café que el anterior pero emplear para ello una proporción menor de agua.
+                 <br>
+                 <br>
+                3. Cortado o macchiato: <br>
+                Uno de los más demandados por lo general, llamamos cortado o macchiato a un tipo de café espresso a la cual se le agrega una ligera cantidad de leche, que manche o tiña el café.
+                <br>
+                <br>
+                4. Americano: <br>
+                El café americano es un tipo de café derivado del espresso el cual se caracteriza por añadir una cantidad de agua mucho mayor de lo habitual en este tipo de preparación, teniendo como resultado un producto con un sabor menos potente y algo más aguado, algo que lo hace menos amargo y facilita un sabor dulce. En este caso se realizaría primero un espresso y a este se le añadiría externamente agua hirviendo.                
+                <br>
+                <br>
+                5. Café con leche: <br>
+                Semejante al cortado, el café con leche supone la incorporación de leche al café, solo que en esta ocasión se utiliza una proporción igual o semejante del lácteo y el café. Tiene un sabor más dulce y mucho menos intenso, pero sigue siendo potente a nivel de presencia de cafeína.
+                <br>
+                <br>
+                6. Capuchino: <br>
+                El capuchino es otro de los cafés más habituales, siendo semejante al café con leche con la excepción de que en este caso solo encontraremos alrededor de un tercio de café, siendo el resto leche. Por lo general gran parte de esta es espumada, y suele añadírsele de forma espolvoreada algo de cacao en polvo para darle un sabor más dulce.
+                <br>
+                <br>
+                7. Mocca: <br>
+                Se trata de una variante del café con leche en el que además de leche y café se emplea obligatoriamente chocolate o cacao en forma de sirope o polvo.
+            </p>
+        </div>
+    </section>
+   
+<section class="general">
+
+    <div class="general-1">
+        <h2>"Un buen cafe siempre encontrara los mejores clientes..."</h2> 
+    </div>
+    <img src="{{ url_for('static', filename='img/coffe-1.jpg') }}" class="img-1" alt="">
+
+
+</section>
+
+<section class="general">
+
+    <img src="{{ url_for('static', filename='img/pedro pedro pedro.jpg') }}" class="img-2" alt="">
+    <!--<img class="img-2" src="../images/pedro pedro pedro.jpg" alt="">-->
+    <div class="general-2">
+        <h2>"Por eso te invitamos a saborear nuestras variedades..."</h2>
+    </div>
+
+</section>
+
+<section class="blog container">
+
+    <h2>Algunos de nuestros clientes</h2>
+
+    <div class="blog-content">
+        <div class="blog-1">
+            <h3>Café Tortoni- Ciudad Autónoma de Buenos Aires</h3>
+            <p>Fundado en 1858. El café más antiguo de la Ciudad de Buenos Aires!.</p>
+            <img src="{{ url_for('static', filename='img/clientes1.jpg') }}" alt="">
+            
+            <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.822540131936!2d-58.38079238787292!3d-34.60864865764718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad19d1e5cd3%3A0x520b8220bc17c42d!2sCaf%C3%A9%20Tortoni!5e0!3m2!1ses!2sar!4v1716665296148!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    
+
+    <div class="blog-1">
+        <h3>Caffe Tabac - Ciudad Autónoma de Buenos Aires</h3>
+        <p>Elegante esquina de Avenida del Libertador y Coronel Díaz, en la que se puede disfrutar, desde el té o café, hasta platos exquisitos.</p>
+        <img src="{{ url_for('static', filename='img/clientes2.jpg') }}" alt="">
+        
+        <iframe class="iframe"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.9167942749837!2d-58.407233087874!3d-34.5809718561858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb56302e38d87%3A0x7c9f44fd13904f0c!2sCaffe%20Tabac!5e0!3m2!1ses!2sar!4v1716666114362!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+</section>
+
+    
+
+    <footer class="footer">
+
+        <div class="footer-content">
+               <a href="https://www.facebook.com" target="_blank" class="icon">
+                <i class="fa-brands fa-facebook fa-bounce"></i>
+               </a>
+               <a href="https://www.instagram.com" target="_blank" class="icon">
+                <i class="fa-brands fa-instagram fa-bounce"></i>
+               </a>
+               <a href="https://www.twitter.com" target="_blank" class="icon">
+                <i class="fa-brands fa-x-twitter fa-bounce"></i>
+               </a>
+               <a href="https://www.linkedin.com" target="_blank" class="icon">
+                <i class="fa-brands fa-linkedin fa-bounce"></i>
+               </a>
+               <a href="https://www.whatsapp.com" target="_blank" class="icon">
+                <i class="fa-brands fa-whatsapp fa-bounce"></i>
+               </a>   
+        </div>
+    
+            <p>Codo a Codo 2024 - Todos los derechos reservados©</p>
+       
+    </footer>
+    
+
+
+</body>
+</html>
